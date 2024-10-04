@@ -1,5 +1,7 @@
 <template>
-  <button class="border" :class="[...buttonClasses]">
+  <button class="border border-primary relative" :class="[...buttonClasses]">
+    <Loader v-if="loading" class="w-8 h-8 top-3 left-2" />
+
     <slot></slot>
   </button>
 </template>
@@ -11,14 +13,12 @@ import {
   textColors,
   bgColors,
   rounded,
-} from "@/config/baseComponents/button";
-interface Props {
-  color: "primary" | "secondary";
-  outline?: boolean;
-  rounded?: boolean;
-  size: "xs" | "sm" | "md" | "lg" | "xl";
-}
-const props = defineProps<Props>();
+  outline,
+} from "@/config/components/base/button";
+import type { ButtonProps } from "@/types/components/base/button";
+import Loader from "./Loader.vue";
+
+const props = defineProps<ButtonProps>();
 
 const buttonClasses = computed(() => {
   return [
@@ -26,10 +26,9 @@ const buttonClasses = computed(() => {
     textColors[props.color],
     sizes[props.size],
     props.rounded && rounded[props.size],
-    props.outline &&
-      (props.color === "primary"
-        ? "bg-white !text-primary border-primary"
-        : "bg-white !text-secondary border-secondary"),
+    props.outline && outline[props.color],
+    (props.disabled || props.loading) &&
+      "opacity-50 cursor-not-allowed pointer-events-none",
   ];
 });
 </script>

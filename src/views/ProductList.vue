@@ -4,12 +4,9 @@
     <FilterBar class="my-4" />
     <div class="grid grid-cols-4 gap-6 w-full my-4">
       <CardItem
-        v-for="{ id, name, image, description, price } in products"
-        :key="`product-${id}`"
-        :name="name"
-        :description="description"
-        :price="price"
-        :image="image"
+        v-for="product in products"
+        :key="`product-${product.id}`"
+        :product="product"
       />
     </div>
   </div>
@@ -20,7 +17,7 @@ import FilterBar from "@/components/product/FilterBar.vue";
 import CardItem from "@/components/product/CardItem.vue";
 import Service from "@/services/Service";
 import { onMounted, ref } from "vue";
-import type { Product } from "@/types/products/product.ts";
+import type { Product } from "@/types/components/products/product";
 
 const products = ref<Product[]>([]);
 onMounted(() => {

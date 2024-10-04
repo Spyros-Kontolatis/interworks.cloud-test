@@ -23,3 +23,8 @@ export const rounded = {
   lg: "rounded-xl",
   xl: "rounded-2xl",
 };
+
+export const outline = {
+  primary: "bg-white !text-primary border-primary",
+  secondary: "bg-white !text-secondary border-secondary",
+};
