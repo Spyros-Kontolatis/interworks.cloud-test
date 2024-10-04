@@ -25,6 +25,6 @@ export const rounded = {
 };
 
 export const outline = {
-  primary: "bg-white !text-primary border-primary",
-  secondary: "bg-white !text-secondary border-secondary",
+  primary: "bg-website-background !text-primary border-primary",
+  secondary: "bg-website-background !text-secondary border-secondary",
 };

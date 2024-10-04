@@ -6,6 +6,7 @@ export type CartItem = {
 };
 
 export type Cart = {
+  id: string;
   items: Array<CartItem>;
   totalQty: number;
   totalPrice: number;

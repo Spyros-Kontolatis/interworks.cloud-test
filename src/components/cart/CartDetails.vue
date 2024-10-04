@@ -1,5 +1,5 @@
 <template>
-  <div class="border border-gray-400 p-4 rounded-md ml-4">
+  <div class="border border-gray-400 p-4 rounded-md ml-0 md:ml-4">
     <div class="flex flex-col">
       <h4 class="font-bold text-start" v-if="cart.items.length">Products:</h4>
       <div
@@ -13,7 +13,7 @@
             ({{ quantity }} x <PriceItem :price="price" />)
           </div>
         </div>
-        <div class="text-xs flex gap-2">
+        <div class="flex gap-2">
           <PriceItem :price="price * quantity" />
         </div>
       </div>

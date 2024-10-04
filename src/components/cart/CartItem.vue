@@ -6,7 +6,7 @@
     >
       <Loader class="w-10 h-10 top-1/3" />
     </div>
-    <div class="flex gap-4">
+    <div class="flex flex-col md:flex-row gap-4">
       <div>
         <img :src="item.product.image" width="200" />
       </div>

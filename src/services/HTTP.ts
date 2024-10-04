@@ -1,7 +1,8 @@
 import axios from "axios";
+import { api_endpoint } from "@/config/environment";
 import type { AxiosError, AxiosHeaders, AxiosRequestConfig } from "axios";
 import type { Methods, AnyFunction } from "@/types/services/http";
-const hrefToUrl = (href: string): URL => new URL(href, "http://localhost:3000");
+const hrefToUrl = (href: string): URL => new URL(href, api_endpoint);
 
 export class HTTP<T extends object> {
   #method: "get" | "post" | "put" | "delete" = "get";

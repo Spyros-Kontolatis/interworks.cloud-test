@@ -1,9 +1,11 @@
 import { defineStore } from "pinia";
-import { computed, ref } from "vue";
+import { ref } from "vue";
 import type { Cart, CartItem } from "@/types/stores/cart/cart";
+import Service from "@/services/Service";
 
 export const useCartStore = defineStore("cart", () => {
   const cart = ref<Cart>({
+    id: "",
     items: [],
     totalPrice: 0,
     totalQty: 0,
@@ -19,9 +21,15 @@ export const useCartStore = defineStore("cart", () => {
     }
     cart.value.totalQty++;
     cart.value.totalPrice += item.product.price;
+    if (cart.value.id) {
+      Service.cart().update(cart.value.id, cart.value).execute();
+    } else {
+      cart.value.id = Date.now().toString();
+      Service.cart().create(cart.value).execute();
+    }
   };
 
-  const updateItemQuantity = (itemId: number, mode: "remove" | "add") => {
+  const updateItemQuantity = (itemId: string, mode: "remove" | "add") => {
     const itemInCart = cart.value.items.find(
       ({ product: { id } }) => id === itemId
     );
@@ -39,6 +47,7 @@ export const useCartStore = defineStore("cart", () => {
           break;
       }
     }
+    Service.cart().update(cart.value.id, cart.value).execute();
   };
 
   const removeItemFromCart = (item: CartItem) => {
@@ -48,6 +57,7 @@ export const useCartStore = defineStore("cart", () => {
 
     cart.value.totalQty -= item.quantity;
     cart.value.totalPrice -= item.product.price * item.quantity;
+    Service.cart().update(cart.value.id, cart.value).execute();
   };
   return {
     cart,
