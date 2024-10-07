@@ -109,20 +109,9 @@
   "cart": [
     {
       "id": "1728028137252",
-      "items": [
-        {
-          "product": {
-            "id": "1",
-            "name": "Product 1",
-            "price": 1,
-            "image": "https://upload.wikimedia.org/wikipedia/commons/1/11/Test-Logo.svg",
-            "description": "A very nice product"
-          },
-          "quantity": 2
-        }
-      ],
-      "totalPrice": 2,
-      "totalQty": 2
+      "items": [],
+      "totalPrice": 0,
+      "totalQty": 0
     }
   ]
 }

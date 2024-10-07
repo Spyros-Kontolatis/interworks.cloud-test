@@ -9,18 +9,33 @@ exports[`Cart.vue renders the component 1`] = `
   >
     <div>
       <h2
-        class="font-extrabold text-lg"
+        class="font-extrabold text-lg text-start"
       >
-         No products added to the cart yet. Browse products 
-        <router-link
-          class="text-primary"
-          to="[object Object]"
-        >
-          here
-        </router-link>
+        7 Products added to the Cart 
       </h2>
+      
+      <cart-item-stub
+        class="my-8"
+        item="[object Object]"
+      />
+      <cart-item-stub
+        class="my-8"
+        item="[object Object]"
+      />
+      
     </div>
   </div>
-  <!--v-if-->
+  <div
+    class="basis-full md:basis-1/3 md:border-l border-l-none md:border-l-gray-300 md:pl-4 mt-4 md:mt-0"
+  >
+    <h2
+      class="font-extrabold text-lg text-start"
+    >
+      Detailed Cost Analysis
+    </h2>
+    <cart-details-stub
+      class="mt-8"
+    />
+  </div>
 </div>
 `;
