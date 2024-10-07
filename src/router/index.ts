@@ -11,11 +11,6 @@ const routes: Array<RouteRecordRaw> = [
     name: "cart",
     component: () => import("../views/Cart.vue"),
   },
-  {
-    path: "/:id",
-    name: "pdp",
-    component: () => import("../views/ProductDetails.vue"),
-  },
 ];
 
 const router = createRouter({

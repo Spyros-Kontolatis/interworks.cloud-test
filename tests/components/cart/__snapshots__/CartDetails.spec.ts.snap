@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CartDetails.vue correctly renders the details from the store 1`] = `
+<div
+  class="border border-gray-400 p-4 rounded-md ml-0 md:ml-4"
+>
+  <div
+    class="flex flex-col"
+  >
+    <h4
+      class="font-bold text-start"
+    >
+      Products:
+    </h4>
+    
+    <div
+      class="flex justify-between cart-items"
+    >
+      <div
+        class="flex grow"
+      >
+        Product 1 
+        <div
+          class="text-xs flex items-center ml-2"
+        >
+           (1 x 
+          <price-item-stub
+            price="1"
+          />
+          ) 
+        </div>
+      </div>
+      <div
+        class="flex gap-2"
+      >
+        <price-item-stub
+          price="1"
+        />
+      </div>
+    </div>
+    <div
+      class="flex justify-between cart-items"
+    >
+      <div
+        class="flex grow"
+      >
+        Product 2 
+        <div
+          class="text-xs flex items-center ml-2"
+        >
+           (2 x 
+          <price-item-stub
+            price="2"
+          />
+          ) 
+        </div>
+      </div>
+      <div
+        class="flex gap-2"
+      >
+        <price-item-stub
+          price="4"
+        />
+      </div>
+    </div>
+    
+    <div
+      class="flex justify-between font-extrabold border-t border-t-gray-400 pt-2 totals"
+    >
+      <div
+        class=""
+      >
+        TOTAL:
+      </div>
+      <div
+        class="total-price"
+      >
+        <price-item-stub
+          price="5"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`CartDetails.vue renders the component with required props 1`] = `
+<div
+  class="border border-gray-400 p-4 rounded-md ml-0 md:ml-4"
+>
+  <div
+    class="flex flex-col"
+  >
+    <!--v-if-->
+    
+    
+    <div
+      class="flex justify-between font-extrabold border-t border-t-gray-400 pt-2 totals"
+    >
+      <div
+        class=""
+      >
+        TOTAL:
+      </div>
+      <div
+        class="total-price"
+      >
+        <price-item-stub
+          price="0"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

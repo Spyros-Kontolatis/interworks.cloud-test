@@ -1,6 +1,9 @@
 <template>
   <div class="flex flex-col md:flex-row w-full justify-between items-center">
-    <div class="flex gap-4 items-center w-full md:w-auto">
+    <div
+      v-if="sortingOptions?.length"
+      class="flex gap-4 items-center w-full md:w-auto"
+    >
       <h5 class="font-extrabold text-start">Sort:</h5>
       <select
         class="mt-2 p-4 bg-website-background border border-primary rounded-md cursor-pointer grow"
@@ -22,9 +25,12 @@
 
 <script setup lang="ts">
 import { ref, defineEmits, defineProps } from "vue";
-import { FilterBarProps } from "@/types/components/products/filterBar";
 
-const props = defineProps<FilterBarProps>();
+interface FilterBarProps {
+  sortingOptions?: Array<string>;
+}
+
+defineProps<FilterBarProps>();
 const emit = defineEmits(["search", "sort"]);
 
 const search = ref("");

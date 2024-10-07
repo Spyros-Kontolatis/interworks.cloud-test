@@ -24,10 +24,12 @@
 </template>
 
 <script setup lang="ts">
-import { StepperProps } from "@/types/components/cart/stepper";
 import Button from "../base/Button.vue";
 import { defineProps, defineEmits } from "vue";
-
+interface StepperProps {
+  step: number;
+  loading?: boolean;
+}
 defineProps<StepperProps>();
 defineEmits(["update:step"]);
 </script>

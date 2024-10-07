@@ -1,9 +1,13 @@
 <template>
   <div class="bg-light-gray rounded-2xl flex flex-col">
-    <img class="h-2/3 rounded-t-2xl cursor-pointer" :src="product.image" />
+    <img
+      v-if="product.image"
+      class="h-2/3 rounded-t-2xl cursor-pointer"
+      :src="product.image"
+    />
     <div class="px-4">
       <p class="mt-2">{{ product.name }}</p>
-      <p class="my-2">{{ product.description }}</p>
+      <p class="my-2" v-if="product.description">{{ product.description }}</p>
       <PriceItem :price="product.price" class="my-2 grow" />
       <Button
         color="primary"

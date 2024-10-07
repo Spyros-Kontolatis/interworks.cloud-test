@@ -14,9 +14,16 @@ import {
   bgColors,
   rounded,
   outline,
-} from "@/config/components/base/button";
-import type { ButtonProps } from "@/types/components/base/button";
+} from "../../config/components/base/button";
 import Loader from "./Loader.vue";
+interface ButtonProps {
+  color: "primary" | "secondary";
+  outline?: boolean;
+  rounded?: boolean;
+  size: "xs" | "sm" | "md" | "lg" | "xl";
+  disabled?: boolean;
+  loading?: boolean;
+}
 
 const props = defineProps<ButtonProps>();
 

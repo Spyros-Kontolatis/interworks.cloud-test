@@ -25,7 +25,7 @@
           <img
             width="20"
             src="../../assets/icons/trash.svg"
-            class="cursor-pointer"
+            class="cursor-pointer remove-item"
             @click="removeItemFromCart(item)"
           />
         </div>
@@ -36,11 +36,15 @@
 
 <script setup lang="ts">
 import { defineProps, ref } from "vue";
-import type { CartItemProps } from "@/types/components/cart/cart";
+import type { CartItem } from "@/types/stores/cart/cart";
 import { useCartStore } from "@/stores/cart";
 import PriceItem from "../product/PriceItem.vue";
 import Loader from "../base/Loader.vue";
 import Stepper from "./Stepper.vue";
+
+interface CartItemProps {
+  item: CartItem;
+}
 
 const props = defineProps<CartItemProps>();
 const { updateItemQuantity, removeItemFromCart } = useCartStore();

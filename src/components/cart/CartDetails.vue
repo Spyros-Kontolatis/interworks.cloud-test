@@ -3,7 +3,7 @@
     <div class="flex flex-col">
       <h4 class="font-bold text-start" v-if="cart.items.length">Products:</h4>
       <div
-        class="flex justify-between"
+        class="flex justify-between cart-items"
         v-for="{ product: { name, id, price }, quantity } in cart.items"
         :key="id"
       >
@@ -18,10 +18,10 @@
         </div>
       </div>
       <div
-        class="flex justify-between font-extrabold border-t border-t-gray-400 pt-2"
+        class="flex justify-between font-extrabold border-t border-t-gray-400 pt-2 totals"
       >
         <div class="">TOTAL:</div>
-        <div>
+        <div class="total-price">
           <PriceItem :price="cart.totalPrice" />
         </div>
       </div>
@@ -30,7 +30,7 @@
 </template>
 
 <script setup lang="ts">
-import { useCartStore } from "@/stores/cart";
+import { useCartStore } from "../../stores/cart";
 import { storeToRefs } from "pinia";
 import PriceItem from "../product/PriceItem.vue";
 

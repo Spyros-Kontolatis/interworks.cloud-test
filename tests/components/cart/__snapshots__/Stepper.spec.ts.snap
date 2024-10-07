@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Stepper.vue renders the component with required props 1`] = `
+<div
+  class="flex"
+>
+  <button-stub
+    class="rounded-r-none"
+    color="primary"
+    disabled="true"
+    loading="false"
+    outline="true"
+    rounded="true"
+    size="sm"
+  />
+  <div
+    class="border border-primary py-2 px-4"
+  >
+    1
+  </div>
+  <button-stub
+    class="rounded-l-none"
+    color="primary"
+    disabled="false"
+    loading="false"
+    outline="false"
+    rounded="true"
+    size="sm"
+  />
+</div>
+`;
+
+exports[`Stepper.vue successfully increments/decrements stepper 1`] = `
+<div
+  class="flex"
+>
+  <button-stub
+    class="rounded-r-none"
+    color="primary"
+    disabled="true"
+    loading="false"
+    outline="true"
+    rounded="true"
+    size="sm"
+  />
+  <div
+    class="border border-primary py-2 px-4"
+  >
+    1
+  </div>
+  <button-stub
+    class="rounded-l-none"
+    color="primary"
+    disabled="false"
+    loading="false"
+    outline="false"
+    rounded="true"
+    size="sm"
+  />
+</div>
+`;

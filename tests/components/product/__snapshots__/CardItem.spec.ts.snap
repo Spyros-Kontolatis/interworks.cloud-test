@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardItem.vue adds product to cart 1`] = `
+<div
+  class="bg-light-gray rounded-2xl flex flex-col"
+>
+  <!--v-if-->
+  <div
+    class="px-4"
+  >
+    <p
+      class="mt-2"
+    >
+      Product 1
+    </p>
+    <p
+      class="my-2"
+    >
+      A product
+    </p>
+    <price-item-stub
+      class="my-2 grow"
+      price="1"
+    />
+    <button-stub
+      class="mb-2 w-full"
+      color="primary"
+      disabled="false"
+      loading="false"
+      outline="false"
+      rounded="true"
+      size="xl"
+    />
+  </div>
+</div>
+`;
+
+exports[`CardItem.vue renders the component 1`] = `
+<div
+  class="bg-light-gray rounded-2xl flex flex-col"
+>
+  <!--v-if-->
+  <div
+    class="px-4"
+  >
+    <p
+      class="mt-2"
+    >
+      Product 1
+    </p>
+    <p
+      class="my-2"
+    >
+      A product
+    </p>
+    <price-item-stub
+      class="my-2 grow"
+      price="1"
+    />
+    <button-stub
+      class="mb-2 w-full"
+      color="primary"
+      disabled="false"
+      loading="false"
+      outline="false"
+      rounded="true"
+      size="xl"
+    />
+  </div>
+</div>
+`;

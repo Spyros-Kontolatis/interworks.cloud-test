@@ -32,7 +32,6 @@
 </template>
 
 <script setup lang="ts">
-import Loader from "@/components/base/Loader.vue";
 import CartDetails from "@/components/cart/CartDetails.vue";
 import CartItem from "@/components/cart/CartItem.vue";
 import { useCartStore } from "@/stores/cart";

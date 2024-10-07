@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CartItem.vue renders the component with required props 1`] = `
+<div
+  class="border border-gray-400 relative p-4 rounded-md mr-4"
+>
+  <!--v-if-->
+  <div
+    class="flex flex-col md:flex-row gap-4"
+  >
+    <div>
+      <img
+        width="200"
+      />
+    </div>
+    <div
+      class="flex grow justify-between text-start"
+    >
+      <div
+        class="flex flex-col gap-2"
+      >
+        <div
+          class="font-extrabold"
+        >
+          Product 1
+        </div>
+        <div />
+        <stepper-stub
+          loading="false"
+          step="1"
+        />
+      </div>
+      <div
+        class="mr-8 flex flex-col"
+      >
+        <price-item-stub
+          price="2"
+        />
+        <img
+          class="cursor-pointer remove-item"
+          width="20"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`CartItem.vue successfully removes item from store 1`] = `
+<div
+  class="border border-gray-400 relative p-4 rounded-md mr-4"
+>
+  <!--v-if-->
+  <div
+    class="flex flex-col md:flex-row gap-4"
+  >
+    <div>
+      <img
+        width="200"
+      />
+    </div>
+    <div
+      class="flex grow justify-between text-start"
+    >
+      <div
+        class="flex flex-col gap-2"
+      >
+        <div
+          class="font-extrabold"
+        >
+          Product 1
+        </div>
+        <div />
+        <stepper-stub
+          loading="false"
+          step="1"
+        />
+      </div>
+      <div
+        class="mr-8 flex flex-col"
+      >
+        <price-item-stub
+          price="2"
+        />
+        <img
+          class="cursor-pointer remove-item"
+          width="20"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

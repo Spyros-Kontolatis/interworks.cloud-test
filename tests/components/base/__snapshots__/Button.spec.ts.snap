@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button.vue renders the component with required props 1`] = `
+<button
+  class="border border-primary relative bg-primary text-white p-2 text-sm"
+>
+  <!--v-if-->
+  
+  
+</button>
+`;

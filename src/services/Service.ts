@@ -10,10 +10,6 @@ export default class Service {
         const path = baseURL;
         return HTTP.make(path, "get");
       },
-      get: (productId: string) => {
-        const path = `${baseURL}/${productId}`;
-        return HTTP.make(path, "get");
-      },
     };
   }
   static cart() {

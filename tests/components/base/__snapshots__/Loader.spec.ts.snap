@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loader.vue renders the component 1`] = `
+<div
+  class="border-4 border-white border-b-primary rounded-full inline-block animate-spin absolute z-40"
+/>
+`;
